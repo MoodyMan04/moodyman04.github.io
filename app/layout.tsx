@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { VT323 } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar"
+import Footer from "./components/footer"
 
 const vt323 = VT323({weight: '400', subsets: ['latin'], display: "swap"});
 
@@ -20,7 +21,8 @@ export default function RootLayout({
       <body className={vt323.className}>
         <Navbar />
         {children}
-        </body>
+        <Footer />
+      </body>
     </html>
   );
 }
