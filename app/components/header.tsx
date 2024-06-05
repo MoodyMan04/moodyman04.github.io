@@ -1,37 +1,40 @@
+import { gitHubLink, linkedInLink, resumeLink } from "@/public/links";
+
 export default function Header() {
   return (
     <header className="m-4">
       <div className="float-left flex">
-        <a
-          href="#About"
-          className="text-white hover:text-blue-500 mr-1.5 chromatic"
+        <button
+          className="hover:text-blue-500 mx-1.5 chromatic"
           data-text="About"
         >
           About
-        </a>
-        <a
-          href="#Projects"
+        </button>
+        <button
           className="hover:text-blue-500 mx-1.5 chromatic"
           data-text="Projects"
         >
           Projects
-        </a>
+        </button>
         <a
-          href="#GitHub"
+          href={gitHubLink}
+          target="_blank"
           className="hover:text-blue-500 mx-1.5 chromatic"
           data-text="GitHub"
         >
           GitHub
         </a>
         <a
-          href="#LinkedIn"
+          href={linkedInLink}
+          target="_blank"
           className="hover:text-blue-500 mx-1.5 chromatic"
           data-text="LinkedIn"
         >
           LinkedIn
         </a>
         <a
-          href="#Resume"
+          href={resumeLink}
+          target="_blank"
           className="hover:text-blue-500 mx-1.5 chromatic"
           data-text="Resume"
         >
