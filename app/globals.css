@@ -2,18 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Background Main Color + Font Default*/
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
 }
 
 body {
@@ -24,10 +17,143 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  font-size: 1.1em;
+  color: white;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+/* Font Style for h1 */
+@layer base {
+  h1 {
+    @apply text-2xl;
+    @apply font-bold;
+  }
+
+  /* Font Style for header and footer */
+  header,
+  footer {
+    @apply text-xl;
+    @apply font-bold;
+  }
+
+  * {
+    @apply tracking-wide;
+  }
+}
+
+/* Style for chromatic aberration */
+
+.chromatic {
+  position: relative;
+  display: inline-block;
+}
+
+.chromatic::before,
+.chromatic::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  overflow: hidden;
+  opacity: 0.4;
+}
+
+.chromatic::before {
+  color: red;
+  transform: translate(-3px);
+}
+
+.chromatic::after {
+  color: blue;
+  transform: translate(3px);
+}
+
+/* Style for the scanlines and flicker for a crt filter over the website */
+.crt::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.1) 1px,
+    rgba(0, 0, 0, 0.1) 2px
+  );
+  pointer-events: none;
+  z-index: 9999;
+  animation: flicker 0.15s infinite;
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 1;
+  }
+  5% {
+    opacity: 0.95;
+  }
+  10% {
+    opacity: 0.9;
+  }
+  15% {
+    opacity: 0.95;
+  }
+  20% {
+    opacity: 0.9;
+  }
+  25% {
+    opacity: 0.95;
+  }
+  30% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 0.95;
+  }
+  40% {
+    opacity: 0.9;
+  }
+  45% {
+    opacity: 0.95;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  55% {
+    opacity: 0.95;
+  }
+  60% {
+    opacity: 1;
+  }
+  65% {
+    opacity: 0.95;
+  }
+  70% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.95;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  85% {
+    opacity: 0.95;
+  }
+  90% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0.95;
+  }
+  100% {
+    opacity: 1;
   }
 }
