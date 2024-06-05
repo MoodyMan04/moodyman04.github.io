@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { VT323 } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/navbar"
-import Footer from "./components/footer"
+import Header from "./components/header";
+import Footer from "./components/footer";
 
-const vt323 = VT323({weight: '400', subsets: ['latin'], display: "swap"});
+const vt323 = VT323({ weight: "400", subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
   title: "Gunnar Moody",
@@ -19,9 +19,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={vt323.className}>
-        <Navbar />
-        {children}
-        <Footer />
+        <div className="crt">
+          <Header />
+          <br />
+          {children}
+          <br />
+          <Footer />
+        </div>
       </body>
     </html>
   );

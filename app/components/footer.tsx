@@ -1,5 +1,5 @@
 export default function Footer() {
-    return (
-        <p>Thank you for viewing! Gunnar Moody - 2024</p>
-    );
+  return (
+    <footer className="m-4">Thank you for viewing! Gunnar Moody - 2024</footer>
+  );
 }
