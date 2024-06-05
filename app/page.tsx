@@ -3,7 +3,7 @@ export default function Home() {
     <div>
       <h1>Hello World!</h1>
       <p>This site is currently under development for my <i><b>personal website!</b></i></p> 
-      <p>Problem, however: <i>I do not know what I am doing</i>, so, bare with me. Learning experience, yay!</p>
+      <p>Problem, however: <i>I do not know what I am doing</i>, so, bear with me. Learning experience, yay!</p>
       <div className="AboutSection">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="p-4 bg-blue-400 bg-opacity-25 rounded-md">
