@@ -30,14 +30,14 @@ body {
 /* Font Style for h1 */
 @layer base {
   h1 {
-    @apply text-2xl;
+    @apply text-xl md:text-2xl;
     @apply font-bold;
   }
 
   /* Font Style for header and footer */
   header,
   footer {
-    @apply text-xl;
+    @apply text-xl md:text-2xl;
     @apply font-bold;
   }
 
