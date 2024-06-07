@@ -19,12 +19,12 @@ const config: Config = {
       // => @media (min-width: 640px) { ... }
 
       md: "900px",
-      // => @media (min-width: 768px) { ... }
+      // => @media (min-width: 740px) { ... }
 
       lg: "1024px",
       // => @media (min-width: 1024px) { ... }
 
-      xl: "1280px",
+      xl: "1420px",
       // => @media (min-width: 1280px) { ... }
 
       "2xl": "1536px",

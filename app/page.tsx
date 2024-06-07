@@ -1,7 +1,8 @@
 export default function Home() {
   return (
-    <div className="m-4">
-      <h1 className="chromatic" data-text="Hello World">
+    <div className="add-margin">
+      <br className="mt-32" />
+      <h1 className="chromatic" data-text="Hello World!">
         Hello World!
       </h1>
       <div className="aboutSection">

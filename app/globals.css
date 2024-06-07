@@ -2,13 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 
+For the style of the CRT Filter, including the Flicker, Scanline, and Background, 
+credit goes it BowlBird at https://github.com/BowlBird
+Thank you.
+*/
+
 /* Background Main Color + Font Default*/
 :root {
   --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 0, 0, 0;
-  --background-end-rgb: 0, 0, 0;
+  --background-start-rgb: 8, 8, 8;
+  --background-end-rgb: 8, 8, 8;
 }
 
+/* Body Style */
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -17,7 +24,6 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-  font-size: 1.1em;
   color: white;
 }
 
@@ -27,22 +33,58 @@ body {
   }
 }
 
-/* Font Style for h1 */
+/* Format of header and footer location */
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 2.5rem;
+  margin-top: 1rem;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+  margin-bottom: 1rem;
+}
+
 @layer base {
+  /* Font Styles */
   h1 {
-    @apply text-xl md:text-2xl;
+    @apply text-xl md:text-2xl xl:text-4xl;
     @apply font-bold;
   }
 
-  /* Font Style for header and footer */
+  h2 {
+    @apply text-lg md:text-xl xl:text-3xl;
+    @apply font-bold;
+  }
+
+  /* Font Style for body, header, and footer */
+
+  body {
+    @apply text-base md:text-lg xl:text-2xl;
+  }
+
   header,
   footer {
-    @apply text-xl md:text-2xl;
+    @apply text-xl md:text-2xl xl:text-4xl;
     @apply font-bold;
   }
 
+  /* Wide font throughout website */
   * {
     @apply tracking-wide;
+  }
+
+  .add-margin {
+    @apply mx-4;
+  }
+
+  .no-margin {
+    @apply mx-0;
   }
 }
 
@@ -73,7 +115,7 @@ body {
   transform: translate(3px);
 }
 
-/* Style for the scanlines and flicker for a crt filter over the website */
+/* Styles for getting an old crt tv look, including: scanlines, flicker, and a moving scanline */
 .crt::before {
   content: "";
   position: absolute;
@@ -81,79 +123,117 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: repeating-linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0.1) 1px,
-    rgba(0, 0, 0, 0.1) 2px
-  );
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+    linear-gradient(
+      90deg,
+      rgba(255, 0, 0, 0.06),
+      rgba(0, 255, 0, 0.02),
+      rgba(0, 0, 255, 0.06)
+    );
+  background-size: 100% 2px, 3px 100%;
   pointer-events: none;
-  z-index: 9999;
+  z-index: 5;
   animation: flicker 0.15s infinite;
+}
+
+.scanline {
+  width: 100%;
+  height: 100px;
+  z-index: 10;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(255, 255, 255, 0.2) 10%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  opacity: 0.1;
+  position: absolute;
+  bottom: 100%;
+  animation: scanline 10s linear infinite;
+}
+
+/* Animations for scanline and flicker */
+@keyframes scanline {
+  0% {
+    bottom: 100%;
+    opacity: 0.05;
+  }
+  10% {
+    bottom: 100%;
+    opacity: 0.1;
+  }
+  90% {
+    bottom: 0%;
+    opacity: 0.05;
+  }
+  100% {
+    bottom: 0%;
+    opacity: 0;
+  }
 }
 
 @keyframes flicker {
   0% {
-    opacity: 1;
+    opacity: 0.37;
   }
   5% {
-    opacity: 0.95;
+    opacity: 0.35;
   }
   10% {
-    opacity: 0.9;
+    opacity: 0.37;
   }
   15% {
-    opacity: 0.95;
+    opacity: 0.32;
   }
   20% {
-    opacity: 0.9;
+    opacity: 0.34;
   }
   25% {
-    opacity: 0.95;
+    opacity: 0.3;
   }
   30% {
-    opacity: 1;
+    opacity: 0.35;
   }
   35% {
-    opacity: 0.95;
+    opacity: 0.32;
   }
   40% {
-    opacity: 0.9;
+    opacity: 0.35;
   }
   45% {
-    opacity: 0.95;
+    opacity: 0.31;
   }
   50% {
-    opacity: 0.9;
+    opacity: 0.33;
   }
   55% {
-    opacity: 0.95;
+    opacity: 0.3;
   }
   60% {
-    opacity: 1;
+    opacity: 0.36;
   }
   65% {
-    opacity: 0.95;
+    opacity: 0.32;
   }
   70% {
-    opacity: 1;
+    opacity: 0.37;
   }
   75% {
-    opacity: 0.95;
+    opacity: 0.33;
   }
   80% {
-    opacity: 0.9;
+    opacity: 0.35;
   }
   85% {
-    opacity: 0.95;
+    opacity: 0.32;
   }
   90% {
-    opacity: 1;
+    opacity: 0.38;
   }
   95% {
-    opacity: 0.95;
+    opacity: 0.35;
   }
   100% {
-    opacity: 1;
+    opacity: 0.38;
   }
 }

@@ -1,11 +1,20 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
-    <footer className="m-4">
-      <div className="float-left flex">
-        <p>Thank you for viewing! Gunnar Moody - 2024</p>
+    <footer>
+      <div className="float-left flex add-margin">
+        <p
+          className="chromatic"
+          data-text="2024 Gunnar Moody | Thank you for viewing!"
+        >
+          2024{" "}
+          <Link href="/" className="hover:text-blue-500">
+            Gunnar Moody
+          </Link>{" "}
+          | Thank you for viewing!
+        </p>
       </div>
-      <br className="md:hidden" />
-      <div className="float-left md:float-right flex"></div>
     </footer>
   );
 }

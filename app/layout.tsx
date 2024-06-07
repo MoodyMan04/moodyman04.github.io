@@ -18,14 +18,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={vt323.className}>
-        <div className="crt">
-          <Header />
-          <br />
-          {children}
-          <br />
-          <Footer />
-        </div>
+      <body className={`${vt323.className} crt`}>
+        <div className="scanline" />
+        <Header />
+        <br />
+        {children}
+        <br />
+        <Footer />
       </body>
     </html>
   );
