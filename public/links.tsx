@@ -12,4 +12,4 @@ export const linkedInLink: string =
 
 // Resume Link (goes to a Google Drive with the PDF)
 export const resumeLink: string =
-  "https://drive.google.com/file/d/1jTx6uguAuyuB5eERFkrpS8KEY-5QwLO_/view";
+  "https://drive.google.com/file/d/1KVkBxzI7pGFwub2_Vm-eoSt7_rmV7soM/view?usp=sharing";
