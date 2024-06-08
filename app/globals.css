@@ -50,13 +50,6 @@ footer {
   margin-bottom: 1rem;
 }
 
-/* Style for br */
-br {
-  display: block;
-  content: "";
-  margin-top: 0.5rem;
-}
-
 @layer base {
   /* Font Styles */
   h1 {
