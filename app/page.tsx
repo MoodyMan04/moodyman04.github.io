@@ -12,8 +12,8 @@ export default function Home() {
             <br />
             <p className="chromatic">
               Hello! My name is Gunnar Moody! I am a dedicated software engineer
-              and current student of NDSU's class of 2025! I am pursuing a
-              bachelor's degree in Computer Science with an interest in
+              and current student of NDSU&apos;s class of 2025! I am pursuing a
+              bachelor&apos;s degree in Computer Science with an interest in
               Cybersecurity and a minor in A.I.
             </p>
           </div>
