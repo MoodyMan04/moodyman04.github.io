@@ -12,13 +12,13 @@ export default function Home() {
             <br />
             <p className="chromatic">
               Hello! My name is Gunnar Moody! I am a dedicated software engineer
-              and current student of NDSU&apos;s class of 2025! I am pursuing a
-              bachelor&apos;s degree in Computer Science with an interest in
+              and current student of NDSU&#39;s class of 2025! I am pursuing a
+              bachelor&#39;s degree in Computer Science with an interest in
               Cybersecurity and a minor in A.I.
             </p>
           </div>
           <div className="p-4 bg-blue-400 bg-opacity-25 rounded-md">
-            [Insert Images Here]
+            Insert Images Here
           </div>
         </div>
       </div>
