@@ -8,11 +8,11 @@ credit goes it BowlBird at https://github.com/BowlBird
 Thank you.
 */
 
-/* Background Main Color + Font Default*/
+/* Background Main Color*/
 :root {
   --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 8, 8, 8;
-  --background-end-rgb: 8, 8, 8;
+  --background-start-rgb: 15, 15, 15;
+  --background-end-rgb: 15, 15, 15;
 }
 
 /* Body Style */
@@ -50,22 +50,32 @@ footer {
   margin-bottom: 1rem;
 }
 
-/* Style for br */
-br {
+/* Style for smaller br */
+br.small-br {
   display: block;
   content: "";
   margin-top: 0.5rem;
 }
 
+/* Style for img for old website effect */
+.img {
+  image-rendering: pixelated;
+}
+
 @layer base {
   /* Font Styles */
   h1 {
-    @apply text-xl md:text-2xl xl:text-4xl;
+    @apply text-xl md:text-3xl xl:text-4xl;
     @apply font-bold;
   }
 
   h2 {
-    @apply text-lg md:text-xl xl:text-3xl;
+    @apply text-lg md:text-2xl xl:text-3xl;
+    @apply font-bold;
+  }
+
+  h3 {
+    @apply text-base md:text-xl xl:text-2xl;
     @apply font-bold;
   }
 
@@ -139,7 +149,7 @@ br {
 /* Styles for getting an old crt tv look, including: scanlines, flicker, and a moving scanline */
 .crt::before {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -168,7 +178,7 @@ br {
     rgba(0, 0, 0, 0.1) 100%
   );
   opacity: 0.1;
-  position: absolute;
+  position: fixed;
   bottom: 100%;
   animation: scanline 10s linear infinite;
 }
@@ -177,15 +187,15 @@ br {
 @keyframes scanline {
   0% {
     bottom: 100%;
-    opacity: 0.05;
+    opacity: 0.1;
   }
   10% {
     bottom: 100%;
-    opacity: 0.1;
+    opacity: 0.2;
   }
   90% {
     bottom: 0%;
-    opacity: 0.05;
+    opacity: 0.1;
   }
   100% {
     bottom: 0%;

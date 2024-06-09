@@ -2,8 +2,10 @@ import React from "react";
 
 // Logic for dealing with channels
 
+// Channel number variable (can be channel 0 - channel 6, loops onward or backward)
 export var channelNum: number = 0;
 
+// Method for incrementing the channel num, done by '>' button
 export function channelNumForward() {
   return (event: React.MouseEvent) => {
     channelNum++;
@@ -13,9 +15,7 @@ export function channelNumForward() {
     document.getElementById("channelNum")!.innerHTML = "Channel ".concat(
       String(channelNum)
     );
-    document
-      .getElementById("channelNum")!
-      .setAttribute("data-text", "Channel ".concat(String(channelNum)));
+    setVideo(channelNum);
   };
 }
 
@@ -28,8 +28,14 @@ export function channelNumBackward() {
     document.getElementById("channelNum")!.innerHTML = "Channel ".concat(
       String(channelNum)
     );
-    document
-      .getElementById("channelNum")!
-      .setAttribute("data-text", "Channel ".concat(String(channelNum)));
+    setVideo(channelNum);
   };
+}
+
+/* 
+Method for setting the background video based on the channel number
+This method is called whenever the channelNum is increased or decreased
+*/
+function setVideo(channelNum: number) {
+  // LOGIC FOR CHANGING THE CHANNEL VIDEO HERE
 }
