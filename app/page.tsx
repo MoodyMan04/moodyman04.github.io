@@ -57,16 +57,12 @@ export default function Home() {
             <img
               src="forest.svg"
               alt="Tree House Picture"
-              loading="lazy"
-              decoding="async"
               className="rounded-md"
             />
             <br />
             <img
               src="ceoBytele2024.svg"
               alt="CEO Byte-le Picture"
-              loading="lazy"
-              decoding="async"
               className="rounded-md"
             ></img>
           </div>
