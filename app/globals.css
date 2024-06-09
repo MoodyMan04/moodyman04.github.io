@@ -8,7 +8,7 @@ credit goes it BowlBird at https://github.com/BowlBird
 Thank you.
 */
 
-/* Background Main Color + Font Default*/
+/* Background Main Color*/
 :root {
   --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 8, 8, 8;
@@ -48,6 +48,13 @@ footer {
   width: 100%;
   height: 2.5rem;
   margin-bottom: 1rem;
+}
+
+/* Style for smaller br */
+br.small-br {
+  display: block;
+  content: "";
+  margin-top: 0.5rem;
 }
 
 @layer base {
@@ -132,7 +139,7 @@ footer {
 /* Styles for getting an old crt tv look, including: scanlines, flicker, and a moving scanline */
 .crt::before {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -161,7 +168,7 @@ footer {
     rgba(0, 0, 0, 0.1) 100%
   );
   opacity: 0.1;
-  position: absolute;
+  position: fixed;
   bottom: 100%;
   animation: scanline 10s linear infinite;
 }
