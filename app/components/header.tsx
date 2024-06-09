@@ -2,36 +2,43 @@
 
 import { gitHubLink, linkedInLink, resumeLink } from "@/public/links";
 import { channelNum, channelNumForward, channelNumBackward } from "./channel";
+import { scrollToElement } from "./scroll";
 import Link from "next/link";
 
 export default function Header() {
   return (
     <header>
       <div className="float-left flex add-margin">
-        <button className="hover:text-blue-400 mr-1.5 xl:mr-2 chromatic">
+        <button
+          className="hover:text-blue-400 mr-1.5 xl:mr-2 chromatic"
+          onClick={scrollToElement("aboutSection")}
+        >
           About
         </button>
-        <button className="hover:text-blue-400 mx-1.5 xl:mx-2 chromatic">
+        <button
+          className="hover:text-blue-400 mx-1.5 xl:mx-2 chromatic"
+          onClick={scrollToElement("projectsSection")}
+        >
           Projects
         </button>
         <Link
           href={gitHubLink}
           target="_blank"
-          className="underline hover:text-blue-400 mx-1.5 xl:mx-2 chromatic"
+          className="hover:text-blue-400 mx-1.5 xl:mx-2 chromatic"
         >
           GitHub
         </Link>
         <Link
           href={linkedInLink}
           target="_blank"
-          className="underline hover:text-blue-400 mx-1.5 xl:mx-2 chromatic"
+          className="hover:text-blue-400 mx-1.5 xl:mx-2 chromatic"
         >
           LinkedIn
         </Link>
         <Link
           href={resumeLink}
           target="_blank"
-          className="underline hover:text-blue-400 mx-1.5 xl:mx-2 chromatic"
+          className="hover:text-blue-400 mx-1.5 xl:mx-2 chromatic"
         >
           Resume
         </Link>

@@ -7,7 +7,7 @@ export default function Home() {
     <div className="add-margin">
       <br />
       <h1 className="ml-4 chromatic">Hello World!</h1>
-      <div className="aboutSection">
+      <div id="aboutSection">
         <div className="grid grid-cols-1 md:grid-cols-6 mt-4 gap-8">
           <div className="p-4 bg-blue-500 bg-opacity-40 rounded-md md:col-span-4">
             <h1 className="chromatic">Who Am I?</h1>
@@ -64,7 +64,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="projectSection">
+      <div id="projectsSection">
         <div className="mt-4 p-4 bg-blue-500 bg-opacity-40 rounded-md">
           <Projects />
         </div>

@@ -29,18 +29,18 @@ export default function Projects() {
     <div>
       <h1 className="chromatic">Projects!</h1>
       <h3 className="chromatic">GitHub Repos:</h3>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
+      <div className="grid grid-cols-1 md:grid-cols-3">
         {repos.map((user) => {
           const { id, name, html_url, language, owner, description } = user;
           return (
             <div
               key={id}
-              className="p-2 bg-black bg-opacity-50 rounded-md hover:bg-opacity-75"
+              className="m-2 bg-black bg-opacity-50 rounded-lg hover:bg-opacity-75"
             >
               <Link
                 href={html_url}
                 target="_blank"
-                className="block w-full h-full"
+                className="p-4 block w-full h-full"
               >
                 <div className="flex items-center">
                   <img

@@ -57,6 +57,11 @@ br.small-br {
   margin-top: 0.5rem;
 }
 
+/* Style for img for old website effect */
+.img {
+  image-rendering: pixelated;
+}
+
 @layer base {
   /* Font Styles */
   h1 {

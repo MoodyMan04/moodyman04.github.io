@@ -1,4 +1,6 @@
-import Link from "next/link";
+"use client";
+
+import { scrollToElement } from "./scroll";
 
 export default function Footer() {
   return (
@@ -6,9 +8,12 @@ export default function Footer() {
       <div className="float-left flex add-margin">
         <p className="chromatic">
           2024 |{" "}
-          <Link href="/" className="underline hover:text-blue-400">
+          <button
+            className="underline hover:text-blue-400 chromatic"
+            onClick={scrollToElement("top")}
+          >
             Gunnar Moody
-          </Link>{" "}
+          </button>{" "}
           | Thank you for viewing!
         </p>
       </div>
