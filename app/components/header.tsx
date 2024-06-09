@@ -17,21 +17,21 @@ export default function Header() {
         <Link
           href={gitHubLink}
           target="_blank"
-          className="hover:text-blue-400 mx-1.5 xl:mx-2 chromatic"
+          className="underline hover:text-blue-400 mx-1.5 xl:mx-2 chromatic"
         >
           GitHub
         </Link>
         <Link
           href={linkedInLink}
           target="_blank"
-          className="hover:text-blue-400 mx-1.5 xl:mx-2 chromatic"
+          className="underline hover:text-blue-400 mx-1.5 xl:mx-2 chromatic"
         >
           LinkedIn
         </Link>
         <Link
           href={resumeLink}
           target="_blank"
-          className="hover:text-blue-400 mx-1.5 xl:mx-2 chromatic"
+          className="underline hover:text-blue-400 mx-1.5 xl:mx-2 chromatic"
         >
           Resume
         </Link>

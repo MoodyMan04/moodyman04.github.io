@@ -5,8 +5,8 @@ export default function Footer() {
     <footer>
       <div className="float-left flex add-margin">
         <p className="chromatic">
-          2024{" "}
-          <Link href="/" className="hover:text-blue-400">
+          2024 |{" "}
+          <Link href="/" className="underline hover:text-blue-400">
             Gunnar Moody
           </Link>{" "}
           | Thank you for viewing!
