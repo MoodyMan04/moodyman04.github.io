@@ -49,11 +49,19 @@ export default function Home() {
               <br className="small-br" />I love to learn and find everything
               computers fascinating! When I am not studying or working, I am
               typically working on personal projects or enjoying one of many
-              hobbies, such as watching movies, reading a book, practicing
-              guitar, filming and editing videos, game development, etc.
+              hobbies, such as watching movies, reading, practicing guitar,
+              filming and editing videos, game developing, etc.
             </p>
           </div>
           <div className="p-4 bg-blue-500 bg-opacity-40 rounded-md md:col-span-2">
+            <img
+              src="forest.svg"
+              alt="Tree House Picture"
+              loading="lazy"
+              decoding="async"
+              className="rounded-md"
+            />
+            <br />
             <img
               src="ceoBytele2024.svg"
               alt="CEO Byte-le Picture"
@@ -69,6 +77,10 @@ export default function Home() {
           <Projects />
         </div>
       </div>
+      <p className="mt-4 chromatic">
+        In case I don&#39;t see ya, good afternoon, good evening, and good
+        night!
+      </p>
     </div>
   );
 }
