@@ -68,7 +68,7 @@ export default function Home() {
               loading="lazy"
               decoding="async"
               className="rounded-md"
-            ></img>
+            />
           </div>
         </div>
       </div>
