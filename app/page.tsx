@@ -63,7 +63,7 @@ export default function Home() {
             />
             <br />
             <img
-              src="ceoBytele2024.svg"
+              src="ceo.svg"
               alt="CEO Byte-le Picture"
               loading="lazy"
               decoding="async"
