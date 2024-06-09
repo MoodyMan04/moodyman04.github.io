@@ -19,7 +19,7 @@ export default function Home() {
               Skills:
               <br className="small-br" />
               Java | Python | C# | SQL | HTML | CSS | JavaScript and TypeScript
-              | VB.Net
+              | VB.NET
               <br className="small-br" />
               Git | GitHub | MySQL | PostgreSQL | React | Next.js | Django |
               ASP.NET
