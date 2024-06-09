@@ -12,7 +12,7 @@ export const linkedInLink: string =
 
 // Resume Link (goes to a Google Drive with the PDF)
 export const resumeLink: string =
-  "https://drive.google.com/file/d/1r6vJZqLo3pCyHQ3WMmzo_zc5qUQ7l4Ko/view?usp=sharing";
+  "https://drive.google.com/file/d/12sRpTBBeXxfHFRJi3NWqpo4w95T5ytXc/view?usp=sharing";
 
 // Link to Byte-le Royale site
 export const byteleLink: string = "https://royale.ndacm.org/";

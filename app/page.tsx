@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Image from "next/image";
 import { byteleLink } from "@/public/links";
+import Projects from "./components/projects";
 
 export default function Home() {
   return (
@@ -8,7 +8,7 @@ export default function Home() {
       <br />
       <h1 className="ml-4 chromatic">Hello World!</h1>
       <div className="aboutSection">
-        <div className="grid grid-cols-1 mt-4 md:grid-cols-6 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-6 mt-4 gap-8">
           <div className="p-4 bg-blue-500 bg-opacity-40 rounded-md md:col-span-4">
             <h1 className="chromatic">Who Am I?</h1>
             <h2 className="chromatic">
@@ -48,20 +48,25 @@ export default function Home() {
               programming competition for our 2024-25 games!
               <br className="small-br" />I love to learn and find everything
               computers fascinating! When I am not studying or working, I am
-              typically working on personal projects, such as Unity games, or
-              enjoying one of many hobbies, such as watching movies, reading a
-              book, practicing guitar, filming or editing, etc.
+              typically working on personal projects or enjoying one of many
+              hobbies, such as watching movies, reading a book, practicing
+              guitar, filming and editing videos, game development, etc.
             </p>
           </div>
           <div className="p-4 bg-blue-500 bg-opacity-40 rounded-md md:col-span-2">
-            <Image
+            <img
               src="ceoBytele2024.svg"
-              width={400}
-              height={400}
               alt="CEO Byte-le Picture"
+              loading="lazy"
+              decoding="async"
               className="rounded-md"
-            ></Image>
+            ></img>
           </div>
+        </div>
+      </div>
+      <div className="projectSection">
+        <div className="mt-4 p-4 bg-blue-500 bg-opacity-40 rounded-md">
+          <Projects />
         </div>
       </div>
     </div>
