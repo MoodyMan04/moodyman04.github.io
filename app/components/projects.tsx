@@ -29,7 +29,7 @@ export default function Projects() {
     <div>
       <h1 className="chromatic">Projects!</h1>
       <h3 className="chromatic">GitHub Repos:</h3>
-      <div className="grid grid-cols-1 md:grid-cols-3">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-1">
         {repos.map((user) => {
           const { id, name, html_url, language, owner, description } = user;
           return (

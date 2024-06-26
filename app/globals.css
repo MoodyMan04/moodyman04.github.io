@@ -50,13 +50,6 @@ footer {
   margin-bottom: 1rem;
 }
 
-/* Style for smaller br */
-br.small-br {
-  display: block;
-  content: "";
-  margin-top: 0.5rem;
-}
-
 /* Style for img for old website effect */
 .img {
   image-rendering: pixelated;
@@ -102,6 +95,13 @@ br.small-br {
 
   .no-margin {
     @apply mx-0;
+  }
+
+  /* Style for smaller br */
+  br.small-br {
+    display: block;
+    content: "";
+    @apply mt-2 xl:mt-4;
   }
 }
 
