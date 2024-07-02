@@ -10,7 +10,7 @@ export default function Header() {
     <header>
       <div className="float-left flex add-margin">
         <button
-          className="hover:text-blue-400 mr-1.5 xl:mr-2 chromatic"
+          className="hover:text-blue-400 mr-1.5 ml-4 md:ml-0 xl:mr-2 chromatic"
           onClick={scrollToElement("aboutSection")}
         >
           About
@@ -43,10 +43,10 @@ export default function Header() {
           Resume
         </Link>
       </div>
-      <br className="md:hidden" />
+      <br className="my-1 md:hidden" />
       <div className="float-left md:float-right flex add-margin md:no-margin">
         <button
-          className="hover:text-blue-400 mr-1.5 xl:mr-2 chromatic"
+          className="hover:text-blue-400 mr-1.5 ml-4 md:ml-0 xl:mr-2 chromatic"
           onClick={channelNumBackward()}
         >
           &lt;
@@ -61,9 +61,9 @@ export default function Header() {
           &gt;
         </button>
       </div>
-      <br className="md:hidden" />
+      <br className="my-1 md:hidden" />
       <div className="float-left md:float-right flex add-margin md:no-margin">
-        <button className="hover:text-blue-400 mr-1.5 xl:mr-2 chromatic">
+        <button className="hover:text-blue-400 mr-1.5 ml-4 md:ml-0 xl:mr-2 chromatic">
           Audio
         </button>
         <button className="hover:text-blue-400 mx-1.5 xl:mx-2 chromatic">

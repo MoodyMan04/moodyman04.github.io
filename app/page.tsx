@@ -6,7 +6,7 @@ import Contact from "./components/contact";
 export default function Home() {
   return (
     <div className="add-margin">
-      <br className="md:hidden" />
+      <br className="mt-12 md:hidden" />
       <h1 className="ml-4 chromatic">Hello World!</h1>
       <div
         id="aboutSection"
@@ -58,7 +58,7 @@ export default function Home() {
         </div>
         <div className="p-4 bg-blue-500 bg-opacity-40 rounded-md md:col-span-2">
           <img
-            src="forest.svg"
+            src="images/forest.png"
             alt="Tree House Picture"
             loading="lazy"
             decoding="async"
@@ -66,7 +66,7 @@ export default function Home() {
           />
           <br />
           <img
-            src="ceo.png"
+            src="images/ceo.png"
             alt="CEO Byte-le Picture"
             loading="lazy"
             decoding="async"

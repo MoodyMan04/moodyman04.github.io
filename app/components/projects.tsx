@@ -88,6 +88,7 @@ function loadProjectCards(
   return (
     <div
       key={id}
+      id={name}
       className="m-2 bg-black bg-opacity-50 rounded-lg hover:bg-opacity-75"
     >
       <Link href={html_url} target="_blank" className="p-4 block w-full h-full">
