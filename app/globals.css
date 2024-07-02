@@ -25,6 +25,7 @@ html {
     )
     rgb(var(--background-start-rgb));
   color: white;
+  word-break: normal;
   cursor: url("../public/cursor/arrow.png"), auto;
 }
 
@@ -32,6 +33,21 @@ html {
 a,
 button {
   cursor: url("../public/cursor/hand.png"), auto;
+}
+
+/* Style for overflow of long titles, words, paragraphs */
+.title-overflow {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.text-overflow {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 @layer utilities {

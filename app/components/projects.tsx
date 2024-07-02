@@ -99,12 +99,12 @@ function loadProjectCards(
             width={75}
             className="rounded-full"
           />
-          <h2 className="ml-4 chromatic">{name}</h2>
+          <h2 className="ml-4 title-overflow chromatic">{name}</h2>
         </div>
         <br className="small-br" />
         <h3 className="chromatic">Language: {language}</h3>
         <br className="small-br" />
-        <p className="chromatic">{description}</p>
+        <p className="text-overflow chromatic">{description}</p>
       </Link>
     </div>
   );

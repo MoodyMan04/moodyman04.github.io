@@ -66,11 +66,8 @@ export default function Header() {
         <button className="hover:text-blue-400 mr-1.5 ml-4 md:ml-0 xl:mr-2 chromatic">
           Audio
         </button>
-        <button className="hover:text-blue-400 mx-1.5 xl:mx-2 chromatic">
+        <button className="hover:text-blue-400 mx-1.5 mr-6 xl:mx-2 chromatic">
           Foreground
-        </button>
-        <button className="hover:text-blue-400 mx-1.5 xl:mx-2 mr-10 xl:mr-12 chromatic">
-          Background
         </button>
       </div>
     </header>
