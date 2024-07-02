@@ -48,7 +48,8 @@ export default function Home() {
             >
               Byte-le Royale
             </Link>{" "}
-            programming competition for our 2024-25 games!
+            programming competition for our 2024-25 games! I currently serve on
+            NDSU ACM's board as Vice Chair.
             <br className="small-br" />I love to learn and find everything
             computers fascinating! When I am not studying or working, I am
             typically working on personal projects or enjoying one of many

@@ -26,13 +26,13 @@ html {
     rgb(var(--background-start-rgb));
   color: white;
   word-break: normal;
-  cursor: url("../public/cursor/arrow.png"), auto;
+  cursor: url("../public/cursor/arrow.cur") -1 0, auto;
 }
 
 /* Style for hand cursor when hovering over a link or button */
 a,
 button {
-  cursor: url("../public/cursor/hand.png"), auto;
+  cursor: url("../public/cursor/link.cur") 7 0, auto;
 }
 
 /* Style for overflow of long titles, words, paragraphs */
