@@ -8,10 +8,7 @@ export default function Home() {
     <div className="add-margin">
       <br className="mt-12 md:hidden" />
       <h1 className="ml-4 chromatic">Hello World!</h1>
-      <div
-        id="aboutSection"
-        className="grid grid-cols-1 md:grid-cols-6 mt-4 gap-4"
-      >
+      <div id="about" className="grid grid-cols-1 md:grid-cols-6 mt-4 gap-4">
         <div className="p-4 bg-blue-500 bg-opacity-40 rounded-md md:col-span-4">
           <h1 className="chromatic">Who Am I?</h1>
           <h2 className="chromatic">
@@ -63,7 +60,7 @@ export default function Home() {
             alt="Tree House Picture"
             loading="lazy"
             decoding="async"
-            className="rounded-md"
+            className="rounded-md mb-10"
           />
           <br />
           <img
@@ -76,13 +73,13 @@ export default function Home() {
         </div>
       </div>
       <div
-        id="projectsSection"
+        id="projects"
         className="mt-4 p-4 bg-blue-500 bg-opacity-40 rounded-md"
       >
         <Projects />
       </div>
       <div
-        id="contactSection"
+        id="contact"
         className="mt-4 p-4 bg-blue-500 bg-opacity-40 rounded-md"
       >
         <Contact />

@@ -4,7 +4,7 @@
 
 /* 
 For the style of the CRT Filter, including the Flicker, Scanline, and Background, 
-credit goes it BowlBird at https://github.com/BowlBird
+credit goes to BowlBird at https://github.com/BowlBird.
 Thank you.
 */
 
@@ -107,29 +107,29 @@ footer {
 @layer base {
   /* Font Styles */
   h1 {
-    @apply text-xl md:text-3xl xl:text-4xl;
+    @apply text-3xl md:text-4xl xl:text-5xl;
     @apply font-bold;
   }
 
   h2 {
-    @apply text-lg md:text-2xl xl:text-3xl;
+    @apply text-2xl md:text-3xl xl:text-4xl;
     @apply font-bold;
   }
 
   h3 {
-    @apply text-base md:text-xl xl:text-2xl;
+    @apply text-xl md:text-2xl xl:text-3xl;
     @apply font-bold;
   }
 
   /* Font Style for body, header, and footer */
 
   body {
-    @apply text-base md:text-lg xl:text-2xl;
+    @apply text-lg md:text-xl xl:text-2xl;
   }
 
   header,
   footer {
-    @apply text-xl md:text-2xl xl:text-4xl;
+    @apply text-2xl md:text-3xl xl:text-4xl;
     @apply font-bold;
   }
 
@@ -139,7 +139,7 @@ footer {
   }
 
   .add-margin {
-    @apply mx-4;
+    @apply mx-4 md:mx-8;
   }
 
   .no-margin {
@@ -182,16 +182,16 @@ footer {
 }
 @keyframes chromaticMove {
   0% {
-    text-shadow: -3px 0px 1px rgba(251, 12, 12, 0.6),
-      2px 0px 1px rgba(12, 79, 251, 0.7);
+    text-shadow: -3px 1px 1px rgba(251, 12, 12, 0.6),
+      2px -1px 1px rgba(12, 79, 251, 0.7);
   }
   50% {
-    text-shadow: -2px 0px 1px rgba(251, 12, 12, 0.6),
-      3px 0px 1px rgba(12, 79, 251, 0.7);
+    text-shadow: -2px 1px 1px rgba(251, 12, 12, 0.6),
+      3px -1px 1px rgba(12, 79, 251, 0.7);
   }
   100% {
-    text-shadow: -3px 0px 1px rgba(251, 12, 12, 0.6),
-      2px 0px 1px rgba(12, 79, 251, 0.7);
+    text-shadow: -3px 1px 1px rgba(251, 12, 12, 0.6),
+      2px -1px 1px rgba(12, 79, 251, 0.7);
   }
 }
 

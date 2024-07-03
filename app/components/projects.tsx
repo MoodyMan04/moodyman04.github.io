@@ -5,7 +5,7 @@ import Link from "next/link";
 
 /* 
 For the logic of fetching GitHub repos using React and the GitHub API, 
-credit goes it Minisodan at https://github.com/minisodan
+credit goes it Minisodan at https://github.com/minisodan.
 Thank you.
 */
 
@@ -89,14 +89,14 @@ function loadProjectCards(
     <div
       key={id}
       id={name}
-      className="m-2 bg-black bg-opacity-50 rounded-lg hover:bg-opacity-75"
+      className="m-1 bg-black bg-opacity-50 rounded-lg hover:bg-opacity-75"
     >
       <Link href={html_url} target="_blank" className="p-4 block w-full h-full">
         <div className="flex items-center">
           <img
             src={`${owner.avatar_url}`}
             alt="Owner Image"
-            width={75}
+            width={50}
             className="rounded-full"
           />
           <h2 className="ml-4 title-overflow chromatic">{name}</h2>

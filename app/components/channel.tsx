@@ -12,7 +12,7 @@ export function channelNumForward() {
     if (channelNum >= 7) {
       channelNum = 0;
     }
-    document.getElementById("channelNum")!.innerHTML = "Channel ".concat(
+    document.getElementById("channelNum")!.innerHTML = "Channel 0".concat(
       String(channelNum)
     );
     setVideo(channelNum);
@@ -25,7 +25,7 @@ export function channelNumBackward() {
     if (channelNum <= -1) {
       channelNum = 6;
     }
-    document.getElementById("channelNum")!.innerHTML = "Channel ".concat(
+    document.getElementById("channelNum")!.innerHTML = "Channel 0".concat(
       String(channelNum)
     );
     setVideo(channelNum);
