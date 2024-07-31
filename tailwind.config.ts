@@ -18,17 +18,17 @@ const config: Config = {
       sm: "640px",
       // => @media (min-width: 640px) { ... }
 
-      md: "900px",
-      // => @media (min-width: 740px) { ... }
+      md: "850px",
+      // => @media (min-width: 850px) { ... }
 
       lg: "1024px",
       // => @media (min-width: 1024px) { ... }
 
       xl: "1420px",
-      // => @media (min-width: 1280px) { ... }
+      // => @media (min-width: 1420px) { ... }
 
-      "2xl": "1536px",
-      // => @media (min-width: 1536px) { ... }
+      "2xl": "1720px",
+      // => @media (min-width: 1720px) { ... }
     },
   },
   plugins: [],

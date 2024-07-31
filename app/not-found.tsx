@@ -1,8 +1,11 @@
+/*
+Component for the 404 page.
+*/
 export default function NotFound() {
   return (
     <div className="add-margin">
-      <br className="mt-14 md:mt-8" />
-      <h2 className="flex justify-center items-center text-center chromatic">
+      <br />
+      <h2 className="flex my-24 justify-center items-center text-center chromatic">
         - 404: Connection Terminated -
         <br />
         Description:
@@ -11,6 +14,7 @@ export default function NotFound() {
         you are looking for.
         <br />- End Communication -
       </h2>
+      <br />
     </div>
   );
 }

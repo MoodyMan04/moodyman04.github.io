@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html id="top" lang="en">
+    <html lang="en">
       <body className={`${vt323.className} crt`}>
         <div className="scanline" />
         <Header />
@@ -25,6 +25,7 @@ export default function RootLayout({
         {children}
         <br />
         <Footer />
+        <br />
       </body>
     </html>
   );

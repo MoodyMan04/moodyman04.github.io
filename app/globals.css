@@ -4,7 +4,7 @@
 
 /* 
 For the style of the CRT Filter, including the Flicker, Scanline, and Background, 
-credit goes it BowlBird at https://github.com/BowlBird
+credit goes to BowlBird at https://github.com/BowlBird.
 Thank you.
 */
 
@@ -15,8 +15,8 @@ Thank you.
   --background-end-rgb: 15, 15, 15;
 }
 
-/* Body Style */
-body {
+/* HTML Style, applied to the entire website, including custom cursor (arrow)*/
+html {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -25,6 +25,56 @@ body {
     )
     rgb(var(--background-start-rgb));
   color: white;
+  word-break: normal;
+  scroll-behavior: smooth;
+  cursor: url("../public/cursor/arrow.png") -1 0, auto;
+  animation: arrow_flicker 0.15s infinite;
+}
+
+@keyframes arrow_flicker {
+  0% {
+    cursor: url("../public/cursor/arrow.png") -1 0, auto;
+  }
+  50% {
+    cursor: url("../public/cursor/arrowOp95.png") -1 0, auto;
+  }
+  100% {
+    cursor: url("../public/cursor/arrow.png") -1 0, auto;
+  }
+}
+
+/* Style for hand cursor when hovering over a link or button */
+a,
+button {
+  cursor: url("../public/cursor/link.png") 7 0, auto;
+  animation: link_flicker 0.15s infinite;
+}
+
+@keyframes link_flicker {
+  0% {
+    cursor: url("../public/cursor/link.png") 7 0, auto;
+  }
+  50% {
+    cursor: url("../public/cursor/linkOp95.png") 7 0, auto;
+  }
+  100% {
+    cursor: url("../public/cursor/link.png") 7 0, auto;
+  }
+}
+
+/* Style for overflow of long titles, words, paragraphs */
+.title-overflow {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.text-overflow {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 @layer utilities {
@@ -50,44 +100,42 @@ footer {
   margin-bottom: 1rem;
 }
 
-/* Style for smaller br */
-br.small-br {
-  display: block;
-  content: "";
-  margin-top: 0.5rem;
-}
-
-/* Style for img for old website effect */
+/* Style for img for pixelated rendering */
 .img {
   image-rendering: pixelated;
+}
+
+/* Style for bluring containers */
+.blur {
+  filter: blur(0.015em);
 }
 
 @layer base {
   /* Font Styles */
   h1 {
-    @apply text-xl md:text-3xl xl:text-4xl;
+    @apply text-3xl md:text-4xl xl:text-5xl;
     @apply font-bold;
   }
 
   h2 {
-    @apply text-lg md:text-2xl xl:text-3xl;
+    @apply text-2xl md:text-3xl xl:text-4xl;
     @apply font-bold;
   }
 
   h3 {
-    @apply text-base md:text-xl xl:text-2xl;
+    @apply text-xl md:text-2xl xl:text-3xl;
     @apply font-bold;
   }
 
   /* Font Style for body, header, and footer */
 
   body {
-    @apply text-base md:text-lg xl:text-2xl;
+    @apply text-lg md:text-xl xl:text-2xl;
   }
 
   header,
   footer {
-    @apply text-xl md:text-2xl xl:text-4xl;
+    @apply text-2xl md:text-3xl xl:text-4xl;
     @apply font-bold;
   }
 
@@ -97,11 +145,18 @@ br.small-br {
   }
 
   .add-margin {
-    @apply mx-4;
+    @apply mx-4 md:mx-8;
   }
 
   .no-margin {
     @apply mx-0;
+  }
+
+  /* Style for smaller br */
+  br.small-br {
+    display: block;
+    content: "";
+    @apply mt-2 xl:mt-4;
   }
 }
 
@@ -110,6 +165,21 @@ br.small-br {
   text-shadow: -3px 0px 1px rgba(255, 0, 0, 0.6),
     2px 0px 1px rgba(0, 0, 255, 0.7);
   animation: chromaticMove 4500ms ease infinite, pulse ease 200ms infinite;
+}
+
+/* Style for channel-videos to play as a background to the website */
+.channel-videos {
+  position: fixed;
+  left: 0;
+  top: 0;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 30%;
+  z-index: -2;
+  pointer-events: none;
+  object-fit: cover;
+  filter: blur(2px);
+  transform: scale(120%);
 }
 
 @keyframes pulse {
@@ -133,16 +203,16 @@ br.small-br {
 }
 @keyframes chromaticMove {
   0% {
-    text-shadow: -3px 0px 1px rgba(251, 12, 12, 0.6),
-      2px 0px 1px rgba(12, 79, 251, 0.7);
+    text-shadow: -3px 1px 1px rgba(251, 12, 12, 0.6),
+      2px -1px 1px rgba(12, 79, 251, 0.7);
   }
   50% {
-    text-shadow: -2px 0px 1px rgba(251, 12, 12, 0.6),
-      3px 0px 1px rgba(12, 79, 251, 0.7);
+    text-shadow: -2px 1px 1px rgba(251, 12, 12, 0.6),
+      3px -1px 1px rgba(12, 79, 251, 0.7);
   }
   100% {
-    text-shadow: -3px 0px 1px rgba(251, 12, 12, 0.6),
-      2px 0px 1px rgba(12, 79, 251, 0.7);
+    text-shadow: -3px 1px 1px rgba(251, 12, 12, 0.6),
+      2px -1px 1px rgba(12, 79, 251, 0.7);
   }
 }
 
@@ -161,7 +231,7 @@ br.small-br {
       rgba(0, 255, 0, 0.02),
       rgba(0, 0, 255, 0.06)
     );
-  background-size: 100% 2px, 3px 100%;
+  background-size: 100% 4px, 5px 100%;
   pointer-events: none;
   z-index: 5;
   animation: flicker 0.15s infinite;
@@ -187,15 +257,15 @@ br.small-br {
 @keyframes scanline {
   0% {
     bottom: 100%;
-    opacity: 0.1;
+    opacity: 0.2;
   }
   10% {
     bottom: 100%;
-    opacity: 0.2;
+    opacity: 0.3;
   }
   90% {
     bottom: 0%;
-    opacity: 0.1;
+    opacity: 0.2;
   }
   100% {
     bottom: 0%;

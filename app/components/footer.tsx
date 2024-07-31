@@ -1,11 +1,16 @@
 import Link from "next/link";
+import { date } from "./time";
 
+/*
+Component for the Footer section of the website.
+Includes a link to the main page. 
+*/
 export default function Footer() {
   return (
     <footer>
-      <div className="float-left flex add-margin">
+      <div className="float-left flex add-margin blur">
         <p className="chromatic">
-          2024{" "}
+          &#169; 2024-{date.getFullYear()}{" "}
           <Link href="/" className="underline hover:text-blue-400">
             Gunnar Moody
           </Link>{" "}
