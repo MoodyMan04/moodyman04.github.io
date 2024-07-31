@@ -2,12 +2,22 @@ import Link from "next/link";
 import { byteleLink } from "@/public/links";
 import Projects from "./components/projects";
 import Contact from "./components/contact";
+import { date } from "./components/time";
 
+/*
+Main page of the website.
+Used Components:
+- Projects
+- Contact
+*/
 export default function Home() {
   return (
-    <div className="add-margin">
+    <div className="add-margin blur">
       <br className="mt-12 md:hidden" />
-      <h1 className="ml-4 chromatic">Hello World!</h1>
+      <div className="grid grid-cols-2">
+        <h2 className="ml-4 chromatic">Hello World!</h2>
+        <h2 className="mr-4 chromatic text-right">{date.toDateString()}</h2>
+      </div>
       <div id="about" className="grid grid-cols-1 md:grid-cols-6 mt-4 gap-4">
         <div className="p-4 bg-blue-500 bg-opacity-40 rounded-md md:col-span-4">
           <h1 className="chromatic">Who Am I?</h1>
@@ -33,7 +43,7 @@ export default function Home() {
             Hello! My name is Gunnar Moody! I am a dedicated software engineer
             and current student of NDSU&#39;s class of 2025, where I am pursuing
             a bachelor&#39;s degree in Computer Science with an interest in
-            Cybersecurity and a minor in A.I.
+            Cybersecurity and a minor in Artifical Intelligence.
             <br className="small-br" />
             While at NDSU, I have gained experience through many different
             projects, including school team projects and working as a game
@@ -60,7 +70,7 @@ export default function Home() {
             alt="Tree House Picture"
             loading="lazy"
             decoding="async"
-            className="rounded-md mb-10"
+            className="rounded-md mb-10 blur"
           />
           <br />
           <img
@@ -68,7 +78,7 @@ export default function Home() {
             alt="CEO Byte-le Picture"
             loading="lazy"
             decoding="async"
-            className="rounded-md"
+            className="rounded-md blur"
           />
         </div>
       </div>

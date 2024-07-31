@@ -9,6 +9,9 @@ credit goes it Minisodan at https://github.com/minisodan.
 Thank you.
 */
 
+/* 
+Component for fetching the GitHub projects to display in cards on the main page.
+*/
 export default function Projects() {
   // Logic to call GitHub API and fetch owned and public repos, as well as some Byte-le repos
   // Set states
@@ -97,7 +100,7 @@ function loadProjectCards(
             src={`${owner.avatar_url}`}
             alt="Owner Image"
             width={50}
-            className="rounded-full"
+            className="rounded-full blur"
           />
           <h2 className="ml-4 title-overflow chromatic">{name}</h2>
         </div>

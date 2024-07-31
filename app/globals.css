@@ -26,6 +26,7 @@ html {
     rgb(var(--background-start-rgb));
   color: white;
   word-break: normal;
+  scroll-behavior: smooth;
   cursor: url("../public/cursor/arrow.png") -1 0, auto;
   animation: arrow_flicker 0.15s infinite;
 }
@@ -104,6 +105,11 @@ footer {
   image-rendering: pixelated;
 }
 
+/* Style for bluring containers */
+.blur {
+  filter: blur(0.015em);
+}
+
 @layer base {
   /* Font Styles */
   h1 {
@@ -161,6 +167,21 @@ footer {
   animation: chromaticMove 4500ms ease infinite, pulse ease 200ms infinite;
 }
 
+/* Style for channel-videos to play as a background to the website */
+.channel-videos {
+  position: fixed;
+  left: 0;
+  top: 0;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 30%;
+  z-index: -2;
+  pointer-events: none;
+  object-fit: cover;
+  filter: blur(2px);
+  transform: scale(120%);
+}
+
 @keyframes pulse {
   0% {
     opacity: 0.9;
@@ -210,7 +231,7 @@ footer {
       rgba(0, 255, 0, 0.02),
       rgba(0, 0, 255, 0.06)
     );
-  background-size: 100% 3px, 4px 100%;
+  background-size: 100% 4px, 5px 100%;
   pointer-events: none;
   z-index: 5;
   animation: flicker 0.15s infinite;

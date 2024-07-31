@@ -1,3 +1,6 @@
+/*
+Component for the 404 page.
+*/
 export default function NotFound() {
   return (
     <div className="add-margin">
