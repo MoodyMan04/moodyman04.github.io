@@ -2,7 +2,6 @@ import Link from "next/link";
 import { byteleLink } from "@/public/links";
 import Projects from "./components/projects";
 import Contact from "./components/contact";
-import { date } from "./components/time";
 
 /*
 Main page of the website.
@@ -16,7 +15,6 @@ export default function Home() {
       <br className="mt-12 md:hidden" />
       <div className="grid grid-cols-2">
         <h2 className="ml-4 chromatic">Hello World!</h2>
-        <h2 className="mr-4 chromatic text-right">{date.toDateString()}</h2>
       </div>
       <div id="about" className="grid grid-cols-1 md:grid-cols-6 mt-4 gap-4">
         <div className="p-4 bg-blue-500 bg-opacity-40 rounded-md md:col-span-4">
