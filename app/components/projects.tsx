@@ -28,16 +28,20 @@ export default function Projects() {
       "Byte 2024": await fetch(
         "https://api.github.com/repos/acm-ndsu/Byte-le-2024"
       ),
+      "Byte 2025": await fetch(
+        "https://api.github.com/repos/acm-ndsu/Byte-le-2025"
+      ),
     };
 
     // Get jsons from repos
     const repos = await response["My Repos"].json();
     const reposByteEngine = await response["Byte Engine"].json();
     const reposByte2024 = await response["Byte 2024"].json();
+    const reposByte2025 = await response["Byte 2025"].json();
 
     // Call set repo methods on repo jsons
     setRepo(repos);
-    setOtherRepo([reposByteEngine, reposByte2024]);
+    setOtherRepo([reposByteEngine, reposByte2024, reposByte2025]);
   };
   useEffect(() => {
     fetchRepos();
