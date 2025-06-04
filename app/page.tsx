@@ -31,17 +31,13 @@ export default function Home() {
             <br className="small-br" />
             Git | GitHub | MySQL | PostgreSQL | React | Next.js | Django |
             ASP.NET
-            <br className="small-br" />
-            Current Work:
-            <br className="small-br" />
-            Fast Enterprises: Implementation Intern for the Colorado Tax team!
           </h3>
           <p className="chromatic">
             <br className="small-br" />
             Hello! My name is Gunnar Moody! I am a dedicated software engineer
-            and current student of NDSU&#39;s class of 2025, where I am pursuing
-            a bachelor&#39;s degree in Computer Science with an interest in
-            Cybersecurity and a minor in Artifical Intelligence.
+            and graduate of NDSU&#39;s class of 2025 with a bachelor&#39;s
+            degree in Computer Science with an interest in Cybersecurity and
+            Artifical Intelligence.
             <br className="small-br" />
             While at NDSU, I have gained experience through many different
             projects, including school team projects and working as a game
@@ -53,8 +49,8 @@ export default function Home() {
             >
               Byte-le Royale
             </Link>{" "}
-            programming competition for our 2024-25 games! I currently serve on
-            NDSU ACM's board as Vice Chair.
+            programming competition for our 2024-25 games! I have served on NDSU
+            ACM's board as Secretary and Vice Chair.
             <br className="small-br" />I love to learn and find everything
             computers fascinating! When I am not studying or working, I am
             typically working on personal projects or enjoying one of many
